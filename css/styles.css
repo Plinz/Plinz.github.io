@@ -1,0 +1,237 @@
+@font-face {
+    font-family: ClanOTBlack;
+    src: url("asset/font/FF_Clan_OT_Black.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ClanOTBold;
+    src: url("asset/font/FF_Clan_OT_Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ClanOTNews;
+    src: url("asset/font/FF_Clan_OT_News.otf") format("opentype");
+}
+
+:root {
+	--bleuclair: rgb(0, 146, 212);
+	--bleu: rgb(3, 55, 140);
+	--bleufonce: rgb(30, 43, 103);
+	--rouge: rgb(208, 46, 38);
+	--rougefonce: rgb(151, 35, 24);
+	--gris: rgb(198, 198, 197);
+	--jaune: rgb(245, 120, 0);
+	--violet: rgb(90, 35, 130);
+	--vert: rgb(140, 155, 30);
+}
+
+body {
+	font-family: ClanOTNews;
+	background-color: var(--bleu);
+}
+
+ /* The navigation bar */
+nav {
+	overflow: hidden;
+	background-color: white;
+	position: fixed; /* Set the navbar to fixed position */
+	display: flex;
+	justify-content: space-between;
+	top: 0; /* Position the navbar at the top of the page */
+	left: 0;
+	width: 100%; /* Full width */
+	height: 6%;
+}
+
+nav .logo {
+	overflow: hidden;
+	height:100%;
+	padding-left: 0.7%;
+}
+
+nav .logo img{
+	display: block;
+	max-height:100%;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	height: 100%;
+	margin: 0;
+}
+
+nav li {
+	display: flex;
+	height: 100%;
+	float: right;
+}
+
+nav li a {
+	font-family: ClanOTNews;
+	font-size: 16px;
+	color: black;
+	padding: 0px 25px;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+}	
+
+nav li a:hover {
+	font-weight: bold;
+	border-bottom-style: solid;
+	border-bottom-color: var(--bleu);
+}
+
+nav li .red {
+	color: var(--rouge);
+}
+
+nav .red:hover {
+	color: var(--rouge);
+	border-bottom-style: solid;
+	border-bottom-color: var(--rouge);
+}
+
+/* Main content */
+.main {
+	margin-top: 100px; /* Add a top margin to avoid content overlay */
+	margin-bottom: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
+	display: flex;
+	position:absolute;
+	height:auto;
+	width: auto;
+	bottom:0;
+	top:0;
+	left:0;
+	right:0;
+}
+
+#map {
+	flex: 3;
+	fill: var(--gris);
+	stroke: white;
+	stroke-width: 6;
+	stroke-linecap: square;
+	stroke-linejoin: bevel
+}
+
+#map circle {
+	stroke: white;
+	stroke-width: 2;
+	fill: var(--bleufonce);
+}
+
+.map-city {
+	stroke: none;
+	fill: var(--bleufonce);
+	font-size: 3em;
+	font-family: ClanOTNews;
+	font-weight: bold;
+}
+
+.map-club path {
+	fill: var(--rouge);
+	cursor: pointer;
+}
+
+.map-club path:hover {
+	fill: var(--rougefonce);
+}
+
+.tooltip {
+	visibility: hidden;
+    stroke: none;
+	fill: var(--gris);
+    font-size: 5em;
+    font-family: ClanOTBlack;
+}
+
+path:hover + .tooltip {
+    visibility: visible;
+}
+
+.right_pane {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+}
+
+.card_club {
+	display: none;
+	flex: 2;	
+	background-color: white;
+}
+
+.container {
+	padding: 10px 16px;
+	flex: 2;
+}
+
+.container h2 {
+	color: var(--bleuclair);
+}
+
+.container a {
+	color: var(--rouge);
+	text-decoration: none;
+}
+
+.siteweb:after {
+	content: "";
+	display: block;
+	background: url("asset/icon/external-link-alt-solid.svg") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0 6px 0 0;
+}
+
+.club_logo {
+	flex: 3;
+	position: relative;
+	overflow: hidden;
+}
+
+.club_logo img{
+	position: absolute;
+	max-width:100%;
+	max-height:100%;
+	top:-100%; left:0; right: 0; bottom:-100%;
+	margin: auto;
+}
+
+#base_presentation{
+	color: white;
+}
+
+#base_presentation h1{
+	font-family: ClanOTBlack;
+	text-align: center;
+}
+
+#base_presentation p{
+	text-align: justify;
+}
+
+#base_logos {
+	display: flex;
+	overflow: hidden;
+}
+
+#base_logos img{
+	max-width:100%;
+	max-height:100%;
+	margin: auto;
+}
+
+h2 {
+	font-family: ClanOTBold;
+}
+
+#mapid {
+	display: none;
+	flex: 3;
+}
