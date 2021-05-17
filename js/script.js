@@ -80,18 +80,6 @@ function openClub(evt, clubName) {
 //	.openPopup();
 }
 
-function home (evt) {
-	var i, tabcontent, tablinks, resized;
-
-	tabcontent = document.getElementsByClassName("card_club");
-	for (i = 0; i < tabcontent.length; i++) {
-		tabcontent[i].style.display = "none";
-	}
-	document.getElementById("mapid").style.display = "none";
-	document.getElementById("base_presentation").style.display = "block";
-	document.getElementById("base_logos").style.display = "flex";
-}
-
 function expandNav() {
 	var x = document.getElementById("navBar");
 	if (x.className != "responsive") {

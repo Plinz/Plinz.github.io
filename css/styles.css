@@ -55,6 +55,7 @@ nav .logo img{
 
 nav ul {
 	list-style-type: none;
+	display: none;
 	margin: 0;
 }
 
@@ -87,19 +88,68 @@ nav .red:hover {
 }
 
 nav .bars {
-	display: none;
+	display: flex;
+	width: 70px;
 }
 
-/* Main content */
-.main {
+
+nav .bars img {
+	height: 100%;
+	padding-bottom: 3px;
+}
+
+
+#navBar.responsive {
+	z-index: 20;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	background-color: white;
+}
+
+#navBar.responsive li {
+	text-decoration: none;
+	font-size: 24px;
+}
+
+#navBar.responsive li a:hover {
+	font-weight: bold;
+	border-bottom-style: none;
+}
+
+.fullpage{
 	z-index: 1;
-	margin-top: 100px; /* Add a top margin to avoid content overlay */
+	margin-top: 80px;
+}
+
+#base_presentation{
+	color: white;
+}
+
+#base_presentation h1{
+	font-family: ClanOTBlack;
+	text-align: center;
+}
+
+#base_presentation p{
+	text-align: justify;
+}
+
+#base_logos {
+	display: flex;
+}
+
+#base_logos img{
+	width:50%;
+}
+
+.main {
 	margin-bottom: 2%;
 	margin-left: 2%;
 	margin-right: 2%;
 	display: flex;
-
-	position:absolute;
 	height:auto;
 	width: auto;
 	bottom:0;
@@ -171,6 +221,7 @@ path:hover + .tooltip {
 
 .container h2 {
 	color: var(--bleuclair);
+	font-family: ClanOTBold;
 }
 
 .container a {
@@ -202,76 +253,27 @@ path:hover + .tooltip {
 	margin: auto;
 }
 
-#base_presentation{
-	color: white;
-}
-
-#base_presentation h1{
-	font-family: ClanOTBlack;
-	text-align: center;
-}
-
-#base_presentation p{
-	text-align: justify;
-}
-
-#base_logos {
-	display: flex;
-	overflow: hidden;
-}
-
-#base_logos img{
-	max-width:100%;
-	max-height:100%;
-	margin: auto;
-}
-
-h2 {
-	font-family: ClanOTBold;
-}
-
 #mapid {
 	display: none;
 	flex: 3;
 }
 
-@media only screen and (max-width: 900px) {
-	#map {
-		display: none;
-	}
-
+@media only screen and (min-width: 992px) {
 	nav ul {
-		display: none;
+		display: flex;
 	}
 	
 	nav .bars {
-		display: flex;
-		width: 70px;
-	}
-
-	nav .bars img {
-		height: 100%;
-		padding-bottom: 3px;
-	}
-
-	#navBar.responsive {
-		z-index: 20;
-		display: flex;
-		flex-direction: column;
-		position: absolute;
-		top: 100%;
-		width: 100%;
-		background-color: white;
-	}
-
-	#navBar.responsive li {
-		text-decoration: none;
-		font-size: 24px;
+		display: none;
 	}
 	
-	#navBar.responsive li a:hover {
-		font-weight: bold;
-		border-bottom-style: none;
+	.fullpage{
+		margin-top: 100px;
 	}
+	
+	.presentation{
+		margin-left: 25%;
+		margin-right: 25%;
+	}	
 
 } 
