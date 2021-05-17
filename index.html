@@ -16,15 +16,18 @@
 	<body>
 		<nav>
 			<div class="logo">
-				<a href="#" onclick="home(event)"><img src="img/ct59_long.jpg" alt="logo_ct59"></a>
+				<a href="#" onclick="home(event)"><img src="img/ct59_long.jpg" alt="logo_ct59"></img></a>
 			</div>
-			<ul>
-				<li><a href="#mission">MISSIONS</a></li>
-				<li><a href="#team">L'ÉQUIPE</a></li>
-				<li><a href="#partenaire">PARTENAIRES</a></li>
-				<li><a href="#club">CLUBS</a></li>
-				<li><a class="red" href="#rocket">ESPACE LICENCIÉ</a></li>
+			<div class="bars">
+				<a href="javascript:void(0);" class="icon" onclick="expandNav()"><img src="css/asset/icon/bars-solid.svg" alt="iconNav"></img></a>
+			</div>
+			<ul id="navBar">
 				<li><a href="#contact">CONTACT</a></li>
+				<li><a class="red" href="#rocket">ESPACE LICENCIÉ</a></li>
+				<li><a href="#club">CLUBS</a></li>
+				<li><a href="#partenaire">PARTENAIRES</a></li>
+				<li><a href="#team">L'ÉQUIPE</a></li>
+				<li><a href="#mission">MISSIONS</a></li>
 			</ul>
 		</nav>
 		<div class="fullpage">

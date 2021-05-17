@@ -91,3 +91,12 @@ function home (evt) {
 	document.getElementById("base_presentation").style.display = "block";
 	document.getElementById("base_logos").style.display = "flex";
 }
+
+function expandNav() {
+	var x = document.getElementById("navBar");
+	if (x.className != "responsive") {
+		x.className = "responsive";
+	} else {
+		x.className = "none";
+	}
+}
