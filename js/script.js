@@ -51,9 +51,9 @@ var clubs = {
 
 var map = L.map('mapid').setView([50.64076, 3.11522], 8);
 var marker = L.marker([50.64076, 3.11522]).addTo(map);
-//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-//}).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
 function openClub(evt, clubName) {
 	var i, tabcontent, tablinks, resized;
