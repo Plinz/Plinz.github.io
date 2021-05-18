@@ -28,13 +28,11 @@
 *{
 	margin: 0;
 	padding: 0;
-	border: 0;	
 }
 
 html, body {
 	height: 100%;
 	font-family: ClanOTNews;
-	background-color: var(--bleu);
 	display: flex;
 }
 
@@ -81,6 +79,7 @@ nav li a {
 	padding: 0px 25px;
 	display: flex;
 	align-items: center;
+
 }	
 
 nav li a:hover:not(.current) {
@@ -142,7 +141,7 @@ nav .bars img {
 }
 
 #base_presentation{
-	color: white;
+	color: black;
 }
 
 #base_presentation h1{
@@ -275,7 +274,7 @@ path:hover + .tooltip {
 	flex: 1;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1025px) {
 
 	nav ul {
 		display: flex;
