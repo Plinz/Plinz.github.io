@@ -64,8 +64,6 @@ function openClub(evt, clubName) {
 	}
 	if (document.getElementById("mapid").style.display != "flex"){
 		document.getElementById("mapid").style.display = "flex";
-		document.getElementById("base_presentation").style.display = "none";
-		document.getElementById("base_logos").style.display = "none";
 		resized = true;
 	}
 

@@ -25,10 +25,20 @@
 	--vert: rgb(140, 155, 30);
 }
 
-body {
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;	
+}
+
+html, body {
+	height: 100%;
 	font-family: ClanOTNews;
 	background-color: var(--bleu);
+	display: flex;
 }
+
+/*Navbar Style*/
 
 nav {
 	z-index: 10;
@@ -73,7 +83,7 @@ nav li a {
 	align-items: center;
 }	
 
-nav li a:hover {
+nav li a:hover:not(.current) {
 	font-weight: bold;
 	border-bottom-style: solid;
 	border-bottom-color: var(--bleu);
@@ -83,8 +93,13 @@ nav li .red {
 	color: var(--rouge);
 }
 
-nav .red:hover {
+nav .red:hover(.current) {
 	border-bottom-color: var(--rouge);
+}
+
+nav .current {
+	background-color: var(--bleuclair);
+	color: white;
 }
 
 nav .bars {
@@ -97,7 +112,6 @@ nav .bars img {
 	height: 100%;
 	padding-bottom: 3px;
 }
-
 
 #navBar.responsive {
 	z-index: 20;
@@ -119,9 +133,12 @@ nav .bars img {
 	border-bottom-style: none;
 }
 
+/*Home Style*/
+
 .fullpage{
-	z-index: 1;
-	margin-top: 80px;
+	margin-top: 70px;
+	margin-left: 2%;
+	margin-right: 2%;
 }
 
 #base_presentation{
@@ -145,20 +162,14 @@ nav .bars img {
 	width:50%;
 }
 
+
+/*Club Style*/
 .main {
-	margin-bottom: 2%;
-	margin-left: 2%;
-	margin-right: 2%;
-	display: flex;
-	height:auto;
-	width: auto;
-	bottom:0;
-	top:0;
-	left:0;
-	right:0;
+	margin-top: 70px;
 }
 
 #map {
+	margin-top: 5px;
 	flex: 3;
 	fill: var(--gris);
 	stroke: white;
@@ -204,13 +215,14 @@ path:hover + .tooltip {
 
 .right_pane {
 	flex: 2;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 }
 
 .card_club {
 	display: none;
-	flex: 2;	
+	flex: 1;	
 	background-color: white;
 }
 
@@ -222,11 +234,16 @@ path:hover + .tooltip {
 .container h2 {
 	color: var(--bleuclair);
 	font-family: ClanOTBold;
+	margin: 10px 0px;
 }
 
 .container a {
 	color: var(--rouge);
 	text-decoration: none;
+}
+
+.container p {
+	margin: 5px 0px;
 }
 
 .siteweb:after {
@@ -255,10 +272,11 @@ path:hover + .tooltip {
 
 #mapid {
 	display: none;
-	flex: 3;
+	flex: 1;
 }
 
 @media only screen and (min-width: 992px) {
+
 	nav ul {
 		display: flex;
 	}
@@ -266,14 +284,18 @@ path:hover + .tooltip {
 	nav .bars {
 		display: none;
 	}
-	
+		
 	.fullpage{
-		margin-top: 100px;
-	}
-	
-	.presentation{
 		margin-left: 25%;
 		margin-right: 25%;
-	}	
+	}
 
+	.main{
+		display: flex;
+
+	}
+	
+	#mapid {
+		flex: 2;
+	}
 } 
