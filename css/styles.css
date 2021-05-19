@@ -333,6 +333,9 @@ path:hover + .tooltip {
 	.presentation{
 		background-color: white;
 		width: 1024px;
+		border-left-style:solid;
+		border-right-style:solid;
+		border-color: white;
 	}
 	
 	#base_presentation{
