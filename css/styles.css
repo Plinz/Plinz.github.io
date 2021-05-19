@@ -359,6 +359,10 @@ path:hover + .tooltip {
 		display: flex;
 	}
 	
+	#map{
+		padding-top: 5px;
+	}
+	
 	#mapid {
 		flex: 2;
 	}
