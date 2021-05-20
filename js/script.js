@@ -57,6 +57,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 function openClub(evt, clubName) {
 	var i, tabcontent, tablinks, resized;
+	
+	window.scrollTo({
+	  top: document.body.scrollHeight,
+	  left: 0,
+	  behavior: 'smooth'
+	});
 
 	tabcontent = document.getElementsByClassName("card_club");
 	for (i = 0; i < tabcontent.length; i++) {

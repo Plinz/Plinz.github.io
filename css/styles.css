@@ -200,7 +200,7 @@ nav .bars img {
 }
 
 #map {
-	width:60%;
+	width:100%;
 	fill: var(--gris);
 	stroke: white;
 	stroke-width: 6;
@@ -243,7 +243,7 @@ path:hover + .tooltip {
 }
 
 .right_pane {
-	width: 40%;
+	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -364,7 +364,12 @@ path:hover + .tooltip {
 	}
 	
 	#map{
+		width: 60%;
 		padding-top: 5px;
+	}
+	
+	.right_pane{
+		width: 40%;
 	}
 	
 	#mapid {
