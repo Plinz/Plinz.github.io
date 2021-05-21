@@ -182,7 +182,6 @@ nav .bars img {
 }
 
 .subCategory{
-	text-align: justify;
 	list-style: none;
 }
 
@@ -199,13 +198,20 @@ nav .bars img {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	padding: 0 8px;
+}
+
+.teamTitle h2 {
+	padding: 10px 0px;
+	width: 100%;
+	text-align: center;
+	color: var(--bleuclair);
+	font-family: ClanOTBold;
 }
 
 .column {
-	float: left;
 	width: 100%;
 	margin-bottom: 16px;
-	padding: 0 8px;
 	display: block;
 }
 
@@ -358,6 +364,10 @@ path:hover + .tooltip {
 }
 
 @media only screen and (min-width: 1025px) {
+	
+	html{
+		overflow-y: scroll;
+	}
 
 	nav ul {
 		display: flex;
@@ -403,13 +413,25 @@ path:hover + .tooltip {
 		padding-top: 15px;
 	}
 	
-	.missionMain ul{
+	.missionMain>ul{
 		width: 1024px;
 		background-color: white;
+		border-left-style:solid;
+		border-right-style:solid;
+		border-color: white;
 	}
 	
 	.subCategory li {
 		padding: 10px 15px;
+	}
+
+	.teamContent {
+		background-color: white;
+		width: 1024px;
+		border-left-style:solid;
+		border-right-style:solid;
+		border-color: white;
+		display: table;
 	}
 	
 	.row {
@@ -418,6 +440,9 @@ path:hover + .tooltip {
 		display: flex;
 	}
 
+	.column{
+		padding: 0 8px;
+	}
 
 	.clubMain{
 		display: flex;
